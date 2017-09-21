@@ -2,6 +2,8 @@ FxRunner
 {
 	name				_call_globals
 
+	flags				depthHack relative
+
 	playfx
 	[
 		fx/weapon/muzzleflash/_global_p_v

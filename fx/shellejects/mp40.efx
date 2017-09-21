@@ -18,8 +18,8 @@ Emitter
 
 	size
 	{
-		start			0.3
-		end				0.3
+		start			0.55
+		end				0.55
 		flags			linear
 	}
 

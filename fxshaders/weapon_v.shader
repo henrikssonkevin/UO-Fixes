@@ -31,7 +31,7 @@ weapon_v/glow_red_b
 weapon_v/muzzleflash_f_a
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_f_a.dds
        blendfunc add
@@ -42,7 +42,7 @@ weapon_v/muzzleflash_f_a
 weapon_v/muzzleflash_f_b
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_f_b.dds
        blendfunc add
@@ -53,7 +53,7 @@ weapon_v/muzzleflash_f_b
 weapon_v/muzzleflash_f_c
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_f_c.dds
        blendfunc add
@@ -64,7 +64,7 @@ weapon_v/muzzleflash_f_c
 weapon_v/muzzleflash_f_d
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_f_d.dds
        blendfunc add
@@ -87,7 +87,7 @@ weapon_v/muzzleflash_fmg42
 weapon_v/muzzleflash_s_a
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_s_a.dds
        blendfunc add
@@ -98,7 +98,7 @@ weapon_v/muzzleflash_s_a
 weapon_v/muzzleflash_s_b
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_s_b.dds
        blendfunc add
@@ -109,7 +109,7 @@ weapon_v/muzzleflash_s_b
 weapon_v/muzzleflash_s_c
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_s_c.dds
        blendfunc add
@@ -120,7 +120,7 @@ weapon_v/muzzleflash_s_c
 weapon_v/muzzleflash_s_d
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_s_d.dds
        blendfunc add
@@ -131,7 +131,7 @@ weapon_v/muzzleflash_s_d
 weapon_v/muzzleflash_ppsh_a
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_ppsh_a.dds
        blendfunc add
@@ -142,7 +142,7 @@ weapon_v/muzzleflash_ppsh_a
 weapon_v/muzzleflash_ppsh_b
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_ppsh_b.dds
        blendfunc add
@@ -153,7 +153,7 @@ weapon_v/muzzleflash_ppsh_b
 weapon_v/muzzleflash_ppsh_c
 {
 	entityMergable
-	sort additive
+	sort nearest
     {
        map gfx/efx_assets/fire/muzzleflash_ppsh_c.dds
        blendfunc add

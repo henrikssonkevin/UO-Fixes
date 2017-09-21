@@ -1,0 +1,11 @@
+FxRunner
+{
+	name				call_fx
+
+	cullrange			32000
+
+	playfx
+	[
+		fx/weapon/explosions/grenade_flesh
+	]
+}

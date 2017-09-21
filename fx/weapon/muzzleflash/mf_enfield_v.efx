@@ -1,0 +1,155 @@
+FxRunner
+{
+	name				_call_globals
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/muzzleflash/_global_r_v
+	]
+}
+
+Particle
+{
+	name				fire_base_core
+
+	flags				depthHack relative
+
+	count				2
+
+	life				50 75
+
+	origin				0 0 0 5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-35 35
+
+	velocity			5 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			10 15
+		end				6 8
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_s_a
+		weapon_v/muzzleflash_s_b
+		weapon_v/muzzleflash_s_c
+		weapon_v/muzzleflash_s_d
+	]
+}
+
+Particle
+{
+	name				fire_base_gas
+
+	flags				depthHack relative
+
+	life				50 75
+
+	origin				0 0 0 3 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			5 0 0
+
+	rgb
+	{
+		start			0.8941 0.349 0.01961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.1 0.2
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			18 24
+		end				6 12
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_s_a
+		weapon_v/muzzleflash_s_b
+		weapon_v/muzzleflash_s_c
+		weapon_v/muzzleflash_s_d
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				depthHack useAlpha
+
+	count				2 3
+
+	life				250 350
+
+	delay				0 50
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			0 -5 -5 15 5 5
+
+	gravity				0 50
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.25
+		flags			linear
+	}
+
+	size
+	{
+		end				2 4
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/smk_p_fractal_wht_a
+		weapon_v/smk_p_fractal_wht_b
+		weapon_v/smk_p_fractal_wht_c
+		weapon_v/smk_p_none_wht_a
+		weapon_v/smk_p_none_wht_b
+		weapon_v/smk_p_none_wht_c
+	]
+}

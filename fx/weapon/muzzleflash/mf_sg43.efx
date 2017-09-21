@@ -1,0 +1,306 @@
+FxRunner
+{
+	name				_call_globals
+
+	playfx
+	[
+		fx/weapon/muzzleflash/_global_hmg
+	]
+}
+
+Particle
+{
+	name				fire_base
+
+	flags				relative
+
+	count				2
+
+	life				50 75
+
+	cullrange			32000
+
+	origin				0 0 0 6 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			100 0 0 200 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			24
+		end				12
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/muzzleflash_f_a
+		fire/muzzleflash_f_b
+		fire/muzzleflash_f_c
+		fire/muzzleflash_f_d
+	]
+}
+
+Particle
+{
+	name				fire_mid
+
+	flags				relative
+
+	count				3
+
+	life				50 75
+
+	cullrange			2000
+
+	origin				3 0 0 15 0 0
+
+	rotation			0 360
+
+	rotationDelta		-35 35
+
+	velocity			100 0 0 200 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				12
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/muzzleflash_f_a
+		fire/muzzleflash_f_b
+		fire/muzzleflash_f_c
+		fire/muzzleflash_f_d
+	]
+}
+
+Particle
+{
+	name				fire_tip_a
+
+	flags				relative
+
+	count				3
+
+	life				50 75
+
+	cullrange			1000
+
+	origin				12 0 0 24 0 0
+
+	rotation			0 360
+
+	rotationDelta		-50 50
+
+	velocity			100 0 0 200 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/muzzleflash_f_a
+		fire/muzzleflash_f_b
+		fire/muzzleflash_f_c
+		fire/muzzleflash_f_d
+	]
+}
+
+Particle
+{
+	name				fire_tip_b
+
+	flags				relative
+
+	count				3
+
+	life				50 75
+
+	cullrange			1000
+
+	origin				20 0 0 30 0 0
+
+	rotation			0 360
+
+	rotationDelta		-50 50
+
+	velocity			100 0 0 200 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			8
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/muzzleflash_f_a
+		fire/muzzleflash_f_b
+		fire/muzzleflash_f_c
+		fire/muzzleflash_f_d
+	]
+}
+
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha relative
+
+	count				1 2
+
+	life				300 650
+
+	cullrange			800
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			100 -25 -25 200 25 25
+
+	gravity				0 100
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				25 50
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				useAlpha
+
+	count				2 3
+
+	life				250 500
+
+	delay				0 150
+
+	cullrange			600
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			0 -5 -5 15 5 5
+
+	gravity				0 50
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				12 25
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}

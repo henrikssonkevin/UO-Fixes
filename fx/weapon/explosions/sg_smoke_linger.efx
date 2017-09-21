@@ -1,0 +1,375 @@
+Particle
+{
+	name				1__smoke_linger
+
+	flags				useAlpha
+
+	life				2000
+
+	cullrange			32000
+
+	origin				12 0 21
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			50 0 18
+
+	gravity				8
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				100
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				2__smoke_linger
+
+	flags				useAlpha
+
+	life				2300
+
+	cullrange			32000
+
+	origin				12 14 14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			35 4 7
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			25
+		end				150
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}
+
+Particle
+{
+	name				3__smoke_linger
+
+	flags				useAlpha
+
+	life				1750
+
+	cullrange			32000
+
+	origin				12 21 0
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			15 12 0
+
+	gravity				25
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.35
+		flags			linear
+	}
+
+	size
+	{
+		start			35
+		end				125
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				4__smoke_linger
+
+	flags				useAlpha
+
+	life				1500
+
+	cullrange			32000
+
+	origin				12 14 -14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			65 5 -8
+
+	gravity				12
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.45
+		flags			linear
+	}
+
+	size
+	{
+		start			48
+		end				140
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				5__smoke_linger
+
+	flags				useAlpha
+
+	life				2400
+
+	cullrange			32000
+
+	origin				12 0 -21
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			80 0 -12
+
+	gravity				6
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.3
+		flags			linear
+	}
+
+	size
+	{
+		start			25
+		end				120
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}
+
+Particle
+{
+	name				6__smoke_linger
+
+	flags				useAlpha
+
+	life				2200
+
+	cullrange			32000
+
+	origin				12 -14 -14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			35 -6 -7
+
+	gravity				8
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.40
+		flags			linear
+	}
+
+	size
+	{
+		start			40
+		end				135
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				7__smoke_linger
+
+	flags				useAlpha
+
+	life				2400
+
+	cullrange			32000
+
+	origin				12 -21 0
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			25 -15 2
+
+	gravity				22
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.36
+		flags			linear
+	}
+
+	size
+	{
+		start			30
+		end				210
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				8__smoke_linger
+
+	flags				useAlpha
+
+	life				1600
+
+	cullrange			32000
+
+	origin				12 -14 14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			65 7 7
+
+	gravity				14
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			35
+		end				125
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}

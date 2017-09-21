@@ -1,0 +1,11 @@
+FxRunner
+{
+	name				_call_fx
+
+	cullrange			32000
+
+	playfx
+	[
+		fx/weapon/explosions/rocket_dirt
+	]
+}

@@ -1,0 +1,285 @@
+Decal
+{
+	name				impact_mark
+
+	life				5000
+
+	cullrange			1000
+
+	rotation			0 360
+
+	size
+	{
+		start			6 9
+	}
+
+	shaders
+	[
+		impact/bullet_metal_a
+		impact/bullet_metal_b
+	]
+}
+
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	count				1 2
+
+	life				500 1000
+
+	cullrange			2500
+
+	origin				0 0 0 20 0 0
+
+	rotation			-45 45
+
+	rotationDelta		-10 10
+
+	velocity			0 -15 -15 30 15 15
+
+	rgb
+	{
+		start			0.6784 0.6706 0.7294
+		end				0.1412 0.1608 0.2078
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			5 15
+		end				20 35
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				spark_center
+
+	count				1 2
+
+	life				100 200
+
+	cullrange			2000
+
+	origin				-2 -2 -2 2 2 2
+
+	rotation			0 360
+
+	rotationDelta		-5 5
+
+	velocity			0 -22 -22 22 22 22
+
+	rgb
+	{
+		start			1 0.8784 0.7686
+		end				1 0.502 0
+		parm			75
+		flags			nonlinear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			90
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				15 30
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/spark_static_a
+		fire/spark_static_b
+		fire/spark_static_c
+	]
+}
+
+OrientedParticle
+{
+	name				spark_orient
+
+	life				100 200
+
+	cullrange			8000
+
+	origin				0.5 0 0 1.5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-5 5
+
+	velocity			0 -22 -22 3 22 22
+
+	size
+	{
+		start			0
+		end				15 30
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/spark_static_a
+		fire/spark_static_b
+		fire/spark_static_c
+	]
+}
+
+Tail
+{
+	name				main_sparks
+
+	flags				usePhysics
+
+	spawnFlags			evenDistribution
+
+	count				5 10
+
+	life				250 1000
+
+	delay				0 50
+
+	cullrange			1000
+
+	bounce				0.25
+
+	velocity			75 -175 -175 500 175 175
+
+	acceleration		-50 -50 -50 50 50 50
+
+	gravity				-500 -200
+
+	rgb
+	{
+		start			1 0.8235 0.651
+		end				1 0.502 0
+		parm			25 75
+		flags			clamp
+	}
+
+	alpha
+	{
+		end				0
+		parm			90 95
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			1.25 5
+		end				0.35 0.75
+	}
+
+	length
+	{
+		start			2 15
+		end				0
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/spark_tail_a
+		fire/spark_tail_b
+	]
+}
+
+Particle
+{
+	name				base_sparks
+
+	count				0 2
+
+	life				100 150
+
+	delay				0 25
+
+	cullrange			1000
+
+	origin				0 -22 -22 22 22 22
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	velocity			0 -36 -36 36 36 36
+
+	gravity				-100 -50
+
+	rgb
+	{
+		end				0.9843 0.6118 0.2
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			96
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			1 6
+		end				12 18
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/spark_static_a
+		fire/spark_static_b
+		fire/spark_static_c
+	]
+}
+
+Light
+{
+	name				light
+
+	life				100
+
+	cullrange			1000
+
+	origin				15 0 0 30 0 0
+
+	rgb
+	{
+		start			0.9725 0.702 0.06275
+		end				0.4078 0.2353 0.1569
+		flags			linear
+	}
+
+	size
+	{
+		start			150 200
+		end				75 100
+		flags			linear
+	}
+}

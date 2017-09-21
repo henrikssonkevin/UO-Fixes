@@ -1,0 +1,127 @@
+Particle
+{
+	name				1__embers
+
+	flags				usePhysics
+
+	count				5 10
+
+	life				250 2000
+
+	cullrange			600
+
+	bounce				0.2 0.5
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			50 -125 -125 150 125 125
+
+	gravity				-500 -100
+
+	rgb
+	{
+		end				1 0.502 0
+		flags			linear
+	}
+
+	size
+	{
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		misc/glow_red_a
+		misc/glow_red_b
+	]
+}
+
+Sound
+{
+	name				2__Sound
+
+	flags				relative
+
+	delay				2200
+
+	sounds
+	[
+		smokegrenade_smoke
+	]
+}
+
+FxRunner
+{
+	name				1_smoke_volume_initial
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_smoke_volume_initial
+	]
+}
+
+FxRunner
+{
+	name				1_smoke_shockwave
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_smoke_shockwave
+	]
+}
+
+FxRunner
+{
+	name				1_smoke_linger
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_smoke_linger
+	]
+}
+
+FxRunner
+{
+	name				1_smoke_linger_b
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_smoke_linger_b
+	]
+}
+
+FxRunner
+{
+	name				2_center_volume
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_center_volume
+	]
+}
+
+FxRunner
+{
+	name				2_center_mist
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/explosions/sg_mist_volume
+	]
+}

@@ -1,0 +1,375 @@
+Particle
+{
+	name				1__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 0 21
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 0 800
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				200
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				2__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 14 14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 400 400
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				250
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}
+
+Particle
+{
+	name				3__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 21 0
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 800 0
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				225
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				4__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 14 -14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 400 -400
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				212
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				5__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 0 -21
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 0 -800
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				235
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}
+
+Particle
+{
+	name				6__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 -14 -14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 -400 -400
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				250
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				7__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 -21 0
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 -800 0
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				210
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				8__smoke_shockwave
+
+	flags				useAlpha
+
+	life				100 150
+
+	cullrange			2000
+
+	origin				12 -14 14
+
+	rotation			0 360
+
+	rotationDelta			-15 15
+
+	velocity			0 400 400
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				230
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}

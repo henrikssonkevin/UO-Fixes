@@ -1,0 +1,84 @@
+Particle
+{
+	name				fire_base
+
+	flags				relative
+
+	count				2
+
+	life				50 75
+
+	origin				0 0 0 6 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			10 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			16 19
+		end				8 10
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_f_a
+		weapon_v/muzzleflash_f_b
+		weapon_v/muzzleflash_f_c
+		weapon_v/muzzleflash_f_d
+	]
+}
+
+Light
+{
+	name				Light
+
+	flags				depthHack relative
+
+	life				100
+
+	origin				10 10 10
+
+	rgb
+	{
+		start			0.9922 0.8353 0.5412
+		end				0.8353 0.5176 0.1686
+		flags			random linear
+	}
+
+	size
+	{
+		start			200 210
+		end				100 110
+		flags			random linear
+	}
+}
+
+CameraShake
+{
+	flags				depthHack usePhysics
+
+	life				25
+
+	bounce				3
+
+	radius				1000
+
+	intensity			3
+}

@@ -1,0 +1,59 @@
+FxRunner
+{
+	name				_call_globals
+
+	flags				depthHack relative
+
+
+	playfx
+	[
+		fx/weapon/muzzleflash/_global_hmg_v
+	]
+}
+
+Particle
+{
+	name				fire_base
+
+	flags				depthHack relative
+
+	count				2
+
+	life				50 75
+
+	origin				0 0 0 6 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			10 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.65 0.9
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			20
+		end				12
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_f_a
+		weapon_v/muzzleflash_f_b
+		weapon_v/muzzleflash_f_c
+		weapon_v/muzzleflash_f_d
+	]
+}

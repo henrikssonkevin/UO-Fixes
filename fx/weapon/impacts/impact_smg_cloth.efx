@@ -1,0 +1,218 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				5 6
+
+	life				250 750
+
+	delay				0 15
+
+	cullrange			4000
+
+	origin				0 0 0 5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			10 -2 -2 75 2 2
+
+	gravity				0 20
+
+	rgb
+	{
+		start			0.4039 0.4039 0.4039
+		end				0.1412 0.1608 0.2078
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.75
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			10 15
+		end				20 25
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Decal
+{
+	name				impact_mark
+
+	life				2e+004
+
+	cullrange			800
+
+	rotation			0 360
+
+	size
+	{
+		start			2 3
+	}
+
+	shaders
+	[
+		impact/bullet_fabric_a
+		impact/bullet_fabric_b
+	]
+}
+
+Line
+{
+	name				smoke_exit
+
+	flags				useAlpha
+
+	life				500 750
+
+	cullrange			200
+
+	origin2				40 -5 -5 60 5 5
+
+	rgb
+	{
+		start			0.4039 0.4039 0.4039
+		end				0.1412 0.1608 0.2078
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.15 0.35
+		end				0
+		parm			0.1 0.15
+		flags			linear
+	}
+
+	size
+	{
+		end				5 10
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_l_wht_a
+		smoke/smk_l_wht_b
+		smoke/smk_l_wht_c
+	]
+}
+
+Particle
+{
+	name				dustfall
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				500 1500
+
+	delay				0 250
+
+	cullrange			800
+
+	rotation			-5 5
+
+	rotationDelta		-2 2
+
+	velocity			0 0 0 15 0 0
+
+	gravity				0 -65
+
+	rgb
+	{
+		start			0.4039 0.4039 0.4039
+		end				0.1412 0.1608 0.2078
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			0 5
+		end				10 30
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				debree_gib
+
+	flags				usePhysics
+
+	count				1 3
+
+	life				250 1500
+
+	cullrange			600
+
+	bounce				0.25 0.75
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	velocity			50 -50 -50 100 50 50
+
+	acceleration		-25 -25 -25 25 25 25
+
+	gravity				-600 -100
+
+	rgb
+	{
+		start			1 0.4745 0
+		end				0.2902 0 0
+		flags			linear
+	}
+
+	size
+	{
+		start			0.25 0.5
+		end				0
+		parm			90
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		misc/glow_yellow_a
+		misc/glow_yellow_b
+	]
+}

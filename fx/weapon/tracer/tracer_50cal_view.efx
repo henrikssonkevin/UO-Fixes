@@ -1,0 +1,96 @@
+Tail
+{
+	name				main
+
+	flags				usePhysics
+
+	count				0 1
+
+	life				500
+
+	cullrange			30000
+
+	velocity			2e+004 0 0
+
+	alpha
+	{
+		end				0
+		parm			50 55
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			12 16
+		end				50
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				2000
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/tracer_plane_a
+		fire/tracer_plane_b
+		fire/tracer_plane_c
+		fire/tracer_plane_d
+		fire/tracer_plane_e
+		fire/tracer_plane_f
+		fire/tracer_plane_g
+		fire/tracer_plane_h
+		fire/tracer_plane_i
+	]
+}
+
+OrientedParticle
+{
+	name				headonview
+
+	count				0 1
+
+	life				2500
+
+	cullrange			30000
+
+	velocity			2e+004 0 0
+
+	rgb
+	{
+		start			0.851 0.5373 0.349
+		end				0.8863 0.6902 0.4941
+		parm			10
+		flags			random wave
+	}
+
+	alpha
+	{
+		end				0
+		parm			98
+		flags			random nonlinear
+	}
+
+	size
+	{
+		start			1 2
+		end				75 85
+		flags			linear
+	}
+
+	length
+	{
+		start			2
+		end				65
+		parm			1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}

@@ -1,0 +1,65 @@
+Light
+{
+	name				Light
+
+	flags				depthHack relative
+
+	life				100
+
+	cullrange			32000
+
+	origin				10 10 10
+
+	rgb
+	{
+		start			0.9922 0.8353 0.5412
+		end				0.8353 0.5176 0.1686
+		flags			random linear
+	}
+
+	size
+	{
+		start			200 210
+		end				100 105
+		flags			random linear
+	}
+}
+
+Particle
+{
+	name				glow
+
+	life				50
+
+	cullrange			32000
+
+	origin				0 0 0 3 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.1 0.25
+		end				0
+		parm			0.15 0.25
+	}
+
+	size
+	{
+		start			72
+		end				72
+	}
+
+	shaders
+	[
+		misc/glow_red_a
+		misc/glow_red_b
+	]
+}

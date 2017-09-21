@@ -1,0 +1,476 @@
+Particle
+{
+	name				smoke_linger_mist
+
+	flags				useAlpha
+
+	spawnFlags			rgbComponentInterpolation
+
+	count				6
+
+	life				1750 2500
+
+	delay				100 500
+
+	cullrange			32000
+
+	origin				-12 -19 -19 225 19 19
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	velocity			-25 -80 -80 130 80 80
+
+	acceleration		-12 -12 -12 12 12 12
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.6392 0.6471 0.6039
+		end				0.7529 0.7333 0.7137
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 150
+		end				225 300
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Decal
+{
+	name				scortch_mark
+
+	life				5000
+
+	delay				50 75
+
+	cullrange			6000
+
+	rotation			0 360
+
+	alpha
+	{
+		start			0.5 1
+	}
+
+	size
+	{
+		start			144 244
+	}
+
+	shaders
+	[
+		impact/scorch_glass_a
+		impact/scorch_glass_b
+	]
+}
+
+Particle
+{
+	name				smoke_plumer_shaft
+
+	flags				useAlpha
+
+	count				6
+
+	life				1000 1200
+
+	delay				125 150
+
+	cullrange			16000
+
+	origin				-15 -25 -25 225 25 25
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			150 -100 -100 275 100 100
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.7922 0.7686 0.7098
+		end				0.7529 0.7333 0.7137
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 100
+		end				300 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_wht_a
+		smoke/smk_p_top_wht_b
+		smoke/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_shock_out
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				5
+
+	life				300
+
+	delay				25
+
+	cullrange			4000
+
+	origin				-40 -40 -40 0 40 40
+
+	rotation			-5 5
+
+	rotationDelta		-5 5
+
+	velocity			0 -690 -690 450 925 690
+
+	gravity				0 100
+
+	rgb
+	{
+		start			0.7529 0.7333 0.7137
+		end				0.5294 0.5412 0.4902
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				250 350
+		parm			50
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_out_wht_a
+		smoke/smk_p_out_wht_b
+		smoke/smk_p_out_wht_c
+	]
+}
+
+Tail
+{
+	name				smoke_eject
+
+	flags				useAlpha
+
+	count				6
+
+	life				350 450
+
+	delay				50 150
+
+	cullrange			4000
+
+	origin				-25 -37 -37 75 37 37
+
+	velocity			1500 -1200 -1200 1800 1200 1200
+
+	rgb
+	{
+		start			0.6392 0.6471 0.6039
+		end				0.5294 0.5412 0.4902
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15
+		flags			linear
+	}
+
+	size
+	{
+		start			40 75
+		end				150
+		flags			linear
+	}
+
+	length
+	{
+		start			75 150
+		end				1200
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_t_wht_a
+		smoke/smk_t_wht_b
+		smoke/smk_t_wht_c
+	]
+}
+
+Particle
+{
+	name				gib_dirt
+
+	flags				usePhysics
+
+	count				5
+
+	life				1000 3000
+
+	delay				250 500
+
+	cullrange			2000
+
+	bounce				0.25 0.5
+
+	origin				0 -30 -30 300 30 30
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			200 -300 -300 900 300 300
+
+	gravity				-800 -500
+
+	size
+	{
+		start			2 8
+		end				0
+		parm			90 80
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		debree/debree_gib_glass_a
+		debree/debree_gib_glass_b
+	]
+}
+
+Line
+{
+	name				smoke_line
+
+	flags				useAlpha
+
+	count				6
+
+	life				350 850
+
+	delay				0 150
+
+	cullrange			4000
+
+	origin2				400 -300 -300 800 300 300
+
+	rgb
+	{
+		start			0.6392 0.6471 0.6039
+		end				0.7529 0.7333 0.7137
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		end				100 250
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_l_wht_a
+		smoke/smk_l_wht_b
+		smoke/smk_l_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_linger_mist_base
+
+	flags				useAlpha
+
+	spawnFlags			rgbComponentInterpolation
+
+	count				6
+
+	life				2750 3500
+
+	cullrange			32000
+
+	origin				0 -100 -100 25 100 100
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	velocity			-25 -50 -50 25 50 50
+
+	acceleration		-12 -12 -12 12 12 12
+
+	gravity				25 50
+
+	rgb
+	{
+		start			0.7529 0.7333 0.7137
+		end				0.6392 0.6471 0.6039
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 150
+		end				225 400
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				debree_p
+
+	count				8
+
+	life				2500 3000
+
+	delay				125 150
+
+	cullrange			4000
+
+	origin				-15 -25 -25 0 25 25
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	velocity			300 -25 -25 750 25 25
+
+	gravity				-800 -400
+
+	rgb
+	{
+		parm			0.25 0.75
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			random linear
+	}
+
+	size
+	{
+		start			25 50
+		end				100 400
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_plg_glass_a
+		debree/debree_plg_glass_b
+	]
+}
+
+FxRunner
+{
+	name				_call_globals
+
+	cullrange			32000
+
+	playfx
+	[
+		fx/weapon/explosions/_global_tank
+	]
+}

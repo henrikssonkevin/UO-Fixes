@@ -1,0 +1,100 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	life				300 650
+
+	cullrange			800
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			100 -25 -25 100 25 25
+
+	gravity				0 100
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			5
+		end				12 25
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				useAlpha
+
+	count				2 3
+
+	life				250 500
+
+	delay				0 150
+
+	cullrange			600
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			0 -5 -5 15 5 5
+
+	gravity				0 50
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				6 12
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}

@@ -1,0 +1,197 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				3 4
+
+	life				250 350
+
+	delay				0 15
+
+	cullrange			4000
+
+	origin				0 0 0 5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			100 -15 -15 200 15 15
+
+	gravity				-200 -100
+
+	rgb
+	{
+		start			1 0.4745 0
+		end				0.2588 0.2824 0.3255
+		parm			10 25
+		flags			clamp
+	}
+
+	alpha
+	{
+		start			0.25 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			5
+		end				15 25
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Decal
+{
+	name				impact_mark
+
+	life				2e+004
+
+	cullrange			800
+
+	rotation			0 360
+
+	size
+	{
+		start			2.5 4
+	}
+
+	shaders
+	[
+		impact/bullet_wood_a
+		impact/bullet_wood_b
+	]
+}
+
+Particle
+{
+	name				dustfall
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				500 1500
+
+	cullrange			800
+
+	rotation			-5 5
+
+	rotationDelta		-2 2
+
+	velocity			0 0 0 30 0 0
+
+	gravity				0 -65
+
+	rgb
+	{
+		start			0.3608 0.3294 0.2549
+		end				0.3725 0.3569 0.4078
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			0 5
+		end				10 20
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Emitter
+{
+	name				wood_splinter
+
+	flags				useModel
+
+	count				2 5
+
+	life				5000
+
+	cullrange			600
+
+	origin				-3 -3 -3 0 3 3
+
+	angle				0 0 0 360 360 360
+
+	size
+	{
+		start			1 5
+	}
+
+	models
+	[
+		xmodel/m_gib_wood_a
+		xmodel/m_gib_wood_b
+		xmodel/m_gib_wood_c
+	]
+}
+
+Particle
+{
+	flags				usePhysics
+
+	count				1 5
+
+	life				250 1000
+
+	cullrange			800
+
+	bounce				0.25 0.5
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			100 -75 -75 200 75 75
+
+	gravity				-600 -400
+
+	size
+	{
+		start			0.25 2
+		end				0
+		parm			98
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		debree/debree_gib_wood_a
+		debree/debree_gib_wood_b
+	]
+}

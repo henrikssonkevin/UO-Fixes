@@ -1,0 +1,37 @@
+Tail
+{
+	name				main
+
+	flags				usePhysics
+
+	count				0 1
+
+	life				2500
+
+	cullrange			30000
+
+	velocity			0 -1.3e+004 0
+
+	size
+	{
+		start			2 3
+		end				75 125
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				2000
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/sparkheavy_tail_a
+		fire/sparkheavy_tail_b
+		fire/tracer_plane_f
+		fire/tracer_plane_g
+		fire/tracer_plane_h
+	]
+}

@@ -1,0 +1,140 @@
+Tail
+{
+	name				aatracertails
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteAccel evenDistribution
+
+	count				0
+
+	life				3700 4300
+
+	delay				300 100
+
+	radius				45 55
+
+	height				100 10
+
+	velocity			1.29e+004 0 0 1.3e+004 0 0
+
+	acceleration		0 60 300 0 -80 122
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		flags			linear
+	}
+
+	size
+	{
+		start			20 30
+		end				40
+		flags			linear
+	}
+
+	length
+	{
+		start			360 390
+		end				320
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/sparkheavy_tail_a
+		fire/sparkheavy_tail_b
+	]
+}
+
+Tail
+{
+	name				main
+
+	flags				usePhysics
+
+	count				0 1
+
+	life				500
+
+	cullrange			30000
+
+	velocity			1.2e+004 0 0 1.3e+004 0 0
+
+	alpha
+	{
+		end				0
+		parm			50 55
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			12 16
+		end				50
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				2000
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/sparkheavy_tail_a
+		fire/sparkheavy_tail_b
+	]
+}
+
+OrientedParticle
+{
+	name				headonview
+
+	life				3000
+
+	cullrange			30000
+
+	velocity			1.2e+004 0 0 1.3e+004 0 0
+
+	rgb
+	{
+		start			0.851 0.5373 0.349
+		end				0.8863 0.6902 0.4941
+		parm			10
+		flags			random wave
+	}
+
+	alpha
+	{
+		end				0
+		parm			98
+		flags			random nonlinear
+	}
+
+	size
+	{
+		start			6 8
+		end				75 85
+		flags			linear
+	}
+
+	length
+	{
+		start			2
+		end				65
+		parm			1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}

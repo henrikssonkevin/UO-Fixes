@@ -1,0 +1,58 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				250 350
+
+	delay				0 15
+
+	cullrange			800
+
+	origin				0 0 0 2 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			25 -7 -7 50 7 7
+
+	gravity				-200 -100
+
+	rgb
+	{
+		start			0.5294 0.5412 0.4902
+		end				0.4 0.4 0.4
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 .65
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			2
+		end				12.5 20
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}

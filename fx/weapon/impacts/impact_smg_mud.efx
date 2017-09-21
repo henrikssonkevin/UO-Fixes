@@ -1,0 +1,293 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				3 5
+
+	life				250 350
+
+	delay				0 15
+
+	cullrange			4000
+
+	origin				0 0 0 5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			250 -50 -50 350 50 50
+
+	gravity				-400 -200
+
+	rgb
+	{
+		start			0.6824 0.6471 0.5569
+		end				0.7804 0.7294 0.5529
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			5
+		end				45 75
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Line
+{
+	name				smoke_exit
+
+	count				0 1
+
+	life				200 350
+
+	cullrange			150
+
+	origin2				30 -5 -5 50 5 5
+
+	rgb
+	{
+		start			0.6824 0.6471 0.5569
+		end				0.1412 0.1608 0.2078
+	}
+
+	alpha
+	{
+		start			0.15 0.5
+		end				0
+		parm			0.1 0.15
+		flags			linear
+	}
+
+	size
+	{
+		end				15 20
+		flags			linear
+	}
+
+	shaders
+	[
+		water/rain_splash_a
+		water/rain_splash_b
+		water/rain_splash_c
+	]
+}
+
+Particle
+{
+	name				smoke_origin_mist
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				250 500
+
+	delay				0 150
+
+	cullrange			1000
+
+	rotation			-5 5
+
+	rotationDelta		-2 2
+
+	velocity			0 -5 -5 15 5 5
+
+	rgb
+	{
+		start			0.4627 0.4235 0.3294
+		end				0.6824 0.6471 0.5569
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			5 10
+		end				20 30
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				drops
+
+	flags				useAlpha
+
+	count				5 10
+
+	life				250 500
+
+	delay				0 25
+
+	cullrange			600
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	velocity			50 -25 -25 425 25 25
+
+	gravity				-600 -400
+
+	rgb
+	{
+		start			0.6824 0.6431 0.5686
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+	}
+
+	size
+	{
+		start			0.5 1
+		end				0
+		parm			25 50
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		water/water_drop_a
+	]
+}
+
+OrientedParticle
+{
+	name				ripple
+
+	count				1 2
+
+	life				250 750
+
+	cullrange			800
+
+	origin				0 -1 -1 0 1 1
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			0 -5 -5 0 5 5
+
+	rgb
+	{
+		start			0.4627 0.4235 0.3294
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				24 36
+		flags			linear
+	}
+
+	shaders
+	[
+		water/water_ripple_a
+	]
+}
+
+Particle
+{
+	name				Copy of smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				250 350
+
+	delay				0 15
+
+	cullrange			1000
+
+	origin				0 0 0 5 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			50 -25 -25 200 25 25
+
+	rgb
+	{
+		start			0.4627 0.4235 0.3294
+		end				0.6824 0.6471 0.5569
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			10 15
+		end				20 25
+		parm			0 25
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}

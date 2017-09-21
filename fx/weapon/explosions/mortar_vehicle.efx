@@ -1,0 +1,525 @@
+Particle
+{
+	name				smoke_linger_mist
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteVel rgbComponentInterpolation
+
+	count				3 4
+
+	life				1750 2500
+
+	delay				100 500
+
+	cullrange			32000
+
+	origin				-19 -19 -19 19 19 225
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	velocity			-80 -80 -25 80 80 130
+
+	acceleration		-12 -12 -12 12 12 12
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.1843 0.1961 0.2
+		end				0.2784 0.2941 0.2706
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 150
+		end				225 300
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_plumer_shaft
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteVel
+
+	count				5 8
+
+	life				1000 1200
+
+	delay				125 150
+
+	cullrange			32000
+
+	origin				-15 -25 -15 225 25 225
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			-100 -100 250 100 100 575
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.4902 0.5098 0.5412
+		end				0.4824 0.4588 0.4706
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 100
+		end				300 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_wht_a
+		smoke/smk_p_top_wht_b
+		smoke/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_shock_out
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteVel evenDistribution
+
+	count				5 6
+
+	life				300
+
+	delay				25
+
+	cullrange			32000
+
+	origin				-40 -40 -40 40 40 0
+
+	rotation			-5 5
+
+	rotationDelta		-5 5
+
+	velocity			-690 -690 0 690 690 450
+
+	gravity				0 100
+
+	rgb
+	{
+		start			0.1843 0.1961 0.2
+		end				0.4667 0.4902 0.451
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				250 350
+		parm			50
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_out_wht_a
+		smoke/smk_p_out_wht_b
+		smoke/smk_p_out_wht_c
+	]
+}
+
+Particle
+{
+	name				gib_dirt
+
+	flags				usePhysics
+
+	spawnFlags			cheapOrgCalc absoluteVel
+
+	count				10
+
+	life				1000 3000
+
+	delay				250 500
+
+	cullrange			5000
+
+	bounce				0.25 0.5
+
+	origin				-30 -30 0 30 30 300
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			-300 -300 200 300 300 900
+
+	gravity				-800 -500
+
+	size
+	{
+		start			2 8
+		end				0
+		parm			90 80
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		debree/debree_gib_metal_a
+		debree/debree_gib_metal_b
+	]
+}
+
+Particle
+{
+	name				smoke_linger_mist_base
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteVel rgbComponentInterpolation
+
+	count				5 7
+
+	life				2750 3500
+
+	origin				-100 -100 0 100 100 25
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	velocity			-50 -50 -25 50 50 25
+
+	acceleration		-12 -12 -12 12 12 12
+
+	gravity				25 50
+
+	rgb
+	{
+		start			0.2588 0.2824 0.3255
+		end				0.1843 0.1961 0.2
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 150
+		end				225 400
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+FxRunner
+{
+	name				_call_globals
+
+	playfx
+	[
+		fx/weapon/explosions/_global_artillery
+	]
+}
+
+Particle
+{
+	name				fire_shock_out
+
+	spawnFlags			cheapOrgCalc absoluteVel evenDistribution
+
+	count				5
+
+	life				175 375
+
+	delay				0 100
+
+	cullrange			32000
+
+	origin				-50 -50 -50 50 50 100
+
+	rotation			-60 60
+
+	rotationDelta		-45 45
+
+	velocity			-130 -130 0 130 130 300
+
+	gravity				0 100
+
+	rgb
+	{
+		end				0.6745 0.4784 0.302
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.75
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			25 50
+		end				320 370
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				fire_plumer_shaft
+
+	flags				clampVelocityX clampVelocityY clampVelocityZ
+
+	spawnFlags			cheapOrgCalc absoluteVel oppositeAccel
+
+	count				3
+
+	life				350 550
+
+	delay				125 150
+
+	cullrange			32000
+
+	origin				-25 -25 -15 25 25 125
+
+	rotation			0 360
+
+	rotationDelta		-2 2
+
+	velocity			-150 -150 300 150 150 675
+
+	acceleration		600 0 0
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.5255 0.4275 0.2824
+		end				0.4902 0.3569 0.2745
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.15 0.35
+		flags			linear
+	}
+
+	size
+	{
+		start			200 325
+		end				400 600
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				smoke_plumer_shaft_reflect
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc
+
+	count				5 8
+
+	life				1000 1200
+
+	delay				125 150
+
+	origin				-15 -25 -15 225 25 225
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			-100 -50 -50 300 50 50
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.4902 0.5098 0.5412
+		end				0.4824 0.4588 0.4706
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 100
+		end				300 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_wht_a
+		smoke/smk_p_top_wht_b
+		smoke/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				Copy of smoke_plumer_shaft
+
+	spawnFlags			cheapOrgCalc
+
+	life				250 350
+
+	delay				125 150
+
+	origin				0 0 0 25 0 0
+
+	rotation			0 360
+
+	rotationDelta		-5 5
+
+	rgb
+	{
+		end				0.5137 0.4039 0.2941
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			75 100
+		end				300 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/exp_gen_d
+		fire/exp_gen_e
+		fire/exp_gen_f
+	]
+}

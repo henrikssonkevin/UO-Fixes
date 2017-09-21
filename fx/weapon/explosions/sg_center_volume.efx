@@ -1,0 +1,547 @@
+Particle
+{
+	name				1__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.28e+004
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-10 8 5
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			75
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				200
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_a
+	]
+}
+
+Particle
+{
+	name				2__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.18e+004
+
+	delay				500
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-4 5 12
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			79
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				225
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_b
+	]
+}
+
+Particle
+{
+	name				3__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.48e+004
+
+	delay				1000
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			5 8 7
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			82
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				300
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				4__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.04e+004
+
+	delay				1500
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			2 -3 18
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			85
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				275
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_a
+	]
+}
+
+Particle
+{
+	name				5__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.18e+004
+
+	delay				2000
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-5 5 12
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			78
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				235
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_b
+	]
+}
+
+Particle
+{
+	name				6__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.42e+004
+
+	delay				2500
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-8 -5 15
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			84
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				150
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				7__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.33e+004
+
+	delay				3000
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			8 5 4
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			80
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				175
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_a
+	]
+}
+
+Particle
+{
+	name				8__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.47e+004
+
+	delay				3500
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			3 2 8
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			79
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				200
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_b
+	]
+}
+
+Particle
+{
+	name				9__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.36e+004
+
+	delay				4000
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-4 -2 12
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			76
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				220
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				10__2center_volume
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			absoluteVel oppositeRotation
+
+	life				1.47e+004
+
+	delay				4500
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	rotationDelta		-3 3
+
+	rotationAccel		5
+
+	rotationClamp		-0.5 0.5
+
+	velocity			-5 9 3
+
+	rgb
+	{
+		start			0.7765 0.7216 0.6824
+		end				0 0 0
+	}
+
+	alpha
+	{
+		end				0
+		parm			77
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				180
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_top_wht_a
+	]
+}

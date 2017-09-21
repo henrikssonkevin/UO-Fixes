@@ -1,0 +1,551 @@
+Particle
+{
+	name				mist_shockwave
+
+	flags				clampVelocityX clampVelocityY clampVelocityZ clampRotation useAlpha
+
+	spawnFlags			cheapOrgCalc oppositeAccel oppositeRotation orgOnCylinder axisFromSphere evenDistribution
+
+	count				3
+
+	life				1000 1250
+
+	delay				25
+
+	cullrange			4000
+
+	radius				1 25
+
+	height				0
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	rotationAccel		10
+
+	rotationClamp		1
+
+	velocity			600 0 0
+
+	acceleration		875 0 0
+
+	gravity				15 50
+
+	rgb
+	{
+		start			0.7765 0.8275 0.8902
+		end				0.902 0.9843 1
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				350 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				water_center_shaft
+
+	flags				useAlpha
+
+	nonUniformScale		1
+
+	count				2 3
+
+	life				2200 2800
+
+	delay				125 150
+
+	cullrange			32000
+
+	origin				-15 -10 -10 225 10 10
+
+	rotationDelta		-0.5 0.5
+
+	velocity			800 0 0
+
+	gravity				-1000
+
+	rgb
+	{
+		end				0.651 0.6706 0.6745
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				200
+		flags			linear
+	}
+
+	size2
+	{
+		start			200
+		end				900
+		flags			linear
+	}
+
+	length
+	{
+		start			0
+		end				0
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_t_water_a
+		debree/debree_t_water_b
+		debree/debree_t_water_c
+	]
+}
+
+Tail
+{
+	name				water_eject_spray
+
+	flags				useAlpha
+
+	count				10
+
+	life				500 600
+
+	delay				100
+
+	cullrange			32000
+
+	origin				0 -50 -50 50 50 50
+
+	velocity			600 -400 -400 1500 400 400
+
+	velocityClamp		200 0 0
+
+	acceleration		500 0 0
+
+	rgb
+	{
+		end				0.7294 0.7412 0.7804
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.75 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			25
+		end				200 350
+		parm			0.15
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				750
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_t_water_a
+		debree/debree_t_water_b
+		debree/debree_t_water_c
+	]
+}
+
+Particle
+{
+	name				water_collumnbase
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				5
+
+	life				2500 2000
+
+	delay				75 300
+
+	cullrange			4000
+
+	origin				-15 -25 -25 0 25 25
+
+	rotation			0 360
+
+	rotationDelta		-5 5
+
+	velocity			800 -40 -40 1400 40 40
+
+	gravity				-1200 -1400
+
+	rgb
+	{
+		parm			0.25 0.75
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			100
+		end				300 450
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_plg_water_a
+		debree/debree_plg_water_b
+		debree/debree_plg_water_c
+	]
+}
+
+OrientedParticle
+{
+	name				ripple
+
+	life				500 600
+
+	cullrange			3000
+
+	origin				0 -25 -25 0 25 25
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				500 550
+		flags			linear
+	}
+
+	shaders
+	[
+		water/water_ripple_a
+	]
+}
+
+OrientedParticle
+{
+	name				foam
+
+	count				3
+
+	life				5000 6000
+
+	delay				0 4000
+
+	cullrange			6000
+
+	origin				0 -125 -125 0 125 125
+
+	rotation			0 360
+
+	rotationDelta		-2 2
+
+	alpha
+	{
+		start			0.15 0.25
+		end				0
+		parm			0.15 0.35
+		flags			linear
+	}
+
+	size
+	{
+		start			150 225
+		end				350 500
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/surface_froth
+	]
+}
+
+Particle
+{
+	name				water_collumntop
+
+	flags				clampRotation useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				10
+
+	life				3500 3750
+
+	delay				0 300
+
+	cullrange			32000
+
+	origin				-15 -25 -25 0 25 25
+
+	rotation			0 360
+
+	rotationDelta		-10 10
+
+	rotationClamp		50 100
+
+	velocity			1500 -100 -100 1700 100 100
+
+	gravity				-1400
+
+	rgb
+	{
+		parm			0.25 0.75
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			100 150
+		end				450 650
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_plg_water_a
+		debree/debree_plg_water_b
+		debree/debree_plg_water_c
+	]
+}
+
+OrientedParticle
+{
+	name				foam_initial
+
+	count				2
+
+	life				5000 6000
+
+	cullrange			4000
+
+	origin				0 -25 -25 0 25 25
+
+	rotation			0 360
+
+	rotationDelta		-4 4
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.15 0.35
+		flags			linear
+	}
+
+	size
+	{
+		start			250 325
+		end				550 600
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/surface_froth
+	]
+}
+
+FxRunner
+{
+	name				_call_globals
+
+	cullrange			32000
+
+	playfx
+	[
+		fx/weapon/explosions/_global_artillery
+	]
+}
+
+Tail
+{
+	name				water_eject_spray_base
+
+	flags				useAlpha
+
+	spawnFlags			oppositeAccel evenDistribution
+
+	count				10
+
+	life				1000 1600
+
+	delay				0 300
+
+	cullrange			32000
+
+	origin				50 -100 -100 50 100 100
+
+	velocity			325 -300 -300 300 300 300
+
+	velocityClamp		200 0 0
+
+	rgb
+	{
+		end				0.7294 0.7412 0.7804
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.75 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			100
+		end				400 450
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				550
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_t_water_a
+		debree/debree_t_water_b
+		debree/debree_t_water_c
+	]
+}
+
+Tail
+{
+	name				water_2nd_spray_base
+
+	flags				useAlpha
+
+	spawnFlags			oppositeAccel evenDistribution
+
+	count				10
+
+	life				750 1000
+
+	delay				1900 2300
+
+	cullrange			4000
+
+	origin				50 -100 -100 50 100 100
+
+	velocity			325 -300 -300 600 300 300
+
+	rgb
+	{
+		end				0.7294 0.7412 0.7804
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.75 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			100 200
+		end				400 450
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				550
+		flags			linear
+	}
+
+	shaders
+	[
+		debree/debree_t_water_a
+		debree/debree_t_water_b
+		debree/debree_t_water_c
+	]
+}

@@ -1,0 +1,177 @@
+Particle
+{
+	name				smoke_blast
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				3 4
+
+	life				250 550
+
+	delay				0 15
+
+	cullrange			4000
+
+	origin				0 0 0 2 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			50 -7 -7 150 7 7
+
+	gravity				-200 -100
+
+	rgb
+	{
+		start			0.7412 0.7765 0.749
+		end				0.7059 0.6667 0.5804
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 1
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			2
+		end				12.5 20
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Decal
+{
+	name				impact_mark
+
+	life				1e+004
+
+	cullrange			800
+
+	rotation			0 360
+
+	size
+	{
+		start			0.5 1.5
+	}
+
+	shaders
+	[
+		impact/bullet_concrete_a
+		impact/bullet_concrete_b
+	]
+}
+
+Particle
+{
+	name				dustfall
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 2
+
+	life				250 750
+
+	delay				0 250
+
+	cullrange			800
+
+	rotation			-5 5
+
+	rotationDelta		-2 2
+
+	velocity			0 0 0 15 0 0
+
+	gravity				0 -65
+
+	rgb
+	{
+		start			0.7059 0.6667 0.5804
+		end				0.7412 0.7765 0.749
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			0 3
+		end				5 15
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				debree_gib
+
+	flags				usePhysics useAlpha
+
+	count				1 5
+
+	life				250 1500
+
+	cullrange			800
+
+	bounce				0.25 0.5
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	velocity			50 -25 -25 150 25 25
+
+	gravity				-600 -400
+
+	rgb
+	{
+		start			0.7412 0.7765 0.749
+		end				0.7059 0.6667 0.5804
+	}
+
+	size
+	{
+		start			0.25 0.75
+		end				0
+		parm			90 95
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		debree/debree_gib_concrete_a
+		debree/debree_gib_concrete_b
+	]
+}

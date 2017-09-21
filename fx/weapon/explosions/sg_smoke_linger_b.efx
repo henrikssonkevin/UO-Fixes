@@ -1,0 +1,195 @@
+Particle
+{
+	name				1__smoke_linger_b
+
+	flags				useAlpha
+
+	life				1750
+
+	delay				1500
+
+	cullrange			32000
+
+	origin				12 -15 15
+
+	rotation			0 360
+
+	rotationDelta			-5 5
+
+	velocity			5 2 13
+
+	gravity				15
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.65
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				125
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}
+
+Particle
+{
+	name				2__smoke_linger_b
+
+	flags				useAlpha
+
+	life				1560
+
+	delay				1650
+
+	cullrange			32000
+
+	origin				12 15 15
+
+	rotation			0 360
+
+	rotationDelta			-5 5
+
+	velocity			16 5 6
+
+	gravity				10
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.45
+		flags			linear
+	}
+
+	size
+	{
+		start			25
+		end				150
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_b
+	]
+}
+
+Particle
+{
+	name				3__smoke_linger_b
+
+	flags				useAlpha
+
+	life				1800
+
+	delay				1800
+
+	cullrange			32000
+
+	origin				12 15 -15
+
+	rotation			0 360
+
+	rotationDelta			-5 5
+
+	velocity			8 16 -2
+
+	gravity				18
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.55
+		flags			linear
+	}
+
+	size
+	{
+		start			35
+		end				135
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				4__smoke_linger_b
+
+	flags				useAlpha
+
+	life				1925
+
+	delay				2000
+
+	cullrange			32000
+
+	origin				12 -15 -15
+
+	rotation			0 360
+
+	rotationDelta			-5 5
+
+	velocity			6 7 -7
+
+	gravity				13
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.35
+		flags			linear
+	}
+
+	size
+	{
+		start			48
+		end				140
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke_grenade/smk_p_none_wht_a
+	]
+}

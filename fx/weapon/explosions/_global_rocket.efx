@@ -1,0 +1,414 @@
+Particle
+{
+	name				fire_exp_core
+
+	count				1 2
+
+	life				100 250
+
+	cullrange			32000
+
+	origin				-25 0 0 0 0 0
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			0 -25 -25 100 25 25
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	size
+	{
+		end				150 225
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+
+Particle
+{
+	name				f_smoke_linger_mist
+
+	flags				useAlpha
+
+	count				3 5
+
+	life				2000 3000
+
+	cullrange			32000
+
+	delay				12
+
+	origin				-7 -12 -12 35 12 12
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			-12 -60 -60 85 60 60
+
+	gravity				10 35
+
+	rgb
+	{
+		start			0.3569 0.3569 0.3765
+		end				0.1882 0.1843 0.2
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				250 300
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				f_smoke_plumer_shaft
+
+	flags				useAlpha
+
+	count				4 5
+
+	life				1000 1250
+
+	cullrange			32000
+
+	delay				50 75
+
+	origin				-7 -12 -12 45 12 12
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			0 -20 -20 350 20 20
+
+	gravity				10 35
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				250
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_blk_a
+		smoke/smk_p_top_blk_b
+		smoke/smk_p_top_blk_c
+	]
+}
+
+Particle
+{
+	name				f_fire_plume
+
+	count				3
+
+	life				200 750
+
+	cullrange			4000
+
+	delay				25 50
+
+	origin				-12 -7 -7 30 7 7
+
+	rotation			-5 5
+
+	rotationDelta		-10 10
+
+	velocity			200 -35 -35 325 35 35
+
+	gravity				0 100
+
+	rgb
+	{
+		end				0.7529 0.4196 0.1961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.35 0.45
+		end				0
+		parm			25 50
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			50 75
+		end				200 250
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_fire_a
+		smoke/smk_p_top_fire_b
+		smoke/smk_p_top_fire_c
+	]
+}
+
+Particle
+{
+	name				f_fire_shock_out
+
+	spawnFlags			evenDistribution
+
+	count				5 10
+
+	life				250
+
+	cullrange			4000
+
+	delay				50 75
+
+	origin				-25 -75 -75 0 75 75
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			0 -325 -325 35 325 325
+
+	gravity				0 100
+
+	rgb
+	{
+		end				0.7529 0.4196 0.1961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		parm			25
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			12 25
+		end				125 250
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				f_fire_plume_puff
+
+	count				3
+
+	life				400 350
+
+	cullrange			4000
+
+	delay				100 200
+
+	origin				25 -15 -15 35 15 15
+
+	rotationDelta		-15 15
+
+	velocity			200 -75 -75 300 75 75
+
+	acceleration		0 -12 -12 -25 12 12
+
+	gravity				0 -100
+
+	rgb
+	{
+		end				0.7529 0.4196 0.1961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			25
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			25 50
+		end				250 300
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				smoke_plumer_base
+
+	flags				useAlpha
+
+	count				3
+
+	life				1500 1750
+
+	cullrange			32000
+
+	origin				-7 -100 -100 0 100 100
+
+	rotation			-15 15
+
+	rotationDelta		-5 5
+
+	velocity			0 -20 -20 50 20 20
+
+	gravity				10 35
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				150 100
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_blk_a
+		smoke/smk_p_top_blk_b
+		smoke/smk_p_top_blk_c
+	]
+}
+
+Light
+{
+	name				D_Light
+
+	life				500 750
+
+	origin				25 0 0
+
+	rgb
+	{
+		start			0.9922 0.851 0.5843
+		end				0.2235 0.06667 0.06667
+		flags			linear
+	}
+
+	size
+	{
+		start			700 800
+		end				350 400
+		flags			linear
+	}
+}
+
+CameraShake
+{
+	name				cam_shake
+
+	flags				usePhysics
+
+	life				250 350
+
+	cullrange			500
+
+	bounce				16
+
+	radius				500
+
+	intensity			16
+}

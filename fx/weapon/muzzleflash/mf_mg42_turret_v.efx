@@ -1,0 +1,188 @@
+FxRunner
+{
+	name				_call_globals
+
+	flags				relative
+
+	playfx
+	[
+		fx/weapon/muzzleflash/_global_hmg_v
+	]
+}
+
+Particle
+{
+	name				fire_base
+
+	flags				relative
+
+	count				2
+
+	life				75 100
+
+	origin				0 0 0 4 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			15 17
+		end				11 13
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_f_a
+		weapon_v/muzzleflash_f_b
+		weapon_v/muzzleflash_f_c
+		weapon_v/muzzleflash_f_d
+	]
+}
+
+Particle
+{
+	name				fire_gas
+
+	flags				relative
+
+	count				0 1
+
+	life				75 100
+
+	origin				0 0 0 4 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			20 24
+		end				10 12
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_s_a
+		weapon_v/muzzleflash_s_b
+		weapon_v/muzzleflash_s_c
+		weapon_v/muzzleflash_s_d
+	]
+}
+
+OrientedParticle
+{
+	name				star
+
+	flags				relative
+
+	count				0 1
+
+	life				75 100
+
+	origin				-0.25 0 0 -1 0 0
+
+	rotation			0 360
+
+	rotationDelta		-25 25
+
+	alpha
+	{
+		start			0.1 0.5
+		end				0
+		parm			0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			22 24
+		end				20 22
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/muzzleflash_fmg42
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				useAlpha
+
+	count				0 1
+
+	life				250 500
+
+	delay				0 150
+
+	rotation			0 360
+
+	rotationDelta		15 -15
+
+	velocity			0 -5 -5 15 5 5
+
+	gravity				0 50
+
+	rgb
+	{
+		start			0.3059 0.2902 0.3333
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			2 4
+		end				6 8
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/smk_p_fractal_wht_a
+		weapon_v/smk_p_fractal_wht_b
+		weapon_v/smk_p_fractal_wht_c
+		weapon_v/smk_p_none_wht_a
+		weapon_v/smk_p_none_wht_b
+		weapon_v/smk_p_none_wht_c
+	]
+}

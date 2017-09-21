@@ -1,0 +1,86 @@
+Tail
+{
+	name				main
+
+	flags				usePhysics
+
+	count				0 1
+
+	life				2500
+
+	cullrange			30000
+
+	velocity			1.3e+004 0 0
+
+	size
+	{
+		start			6 9
+		end				75 100
+		flags			linear
+	}
+
+	length
+	{
+		start			200
+		end				2000
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/sparkheavy_tail_a
+		fire/sparkheavy_tail_b
+		fire/tracer_plane_f
+		fire/tracer_plane_g
+		fire/tracer_plane_h
+	]
+}
+
+OrientedParticle
+{
+	name				forheadon
+
+	count				0
+
+	life				3000
+
+	cullrange			30000
+
+	velocity			1.3e+004 0 0
+
+	rgb
+	{
+		start			0.7922 0.5529 0.4078
+		end				0.8706 0.651 0.4275
+		parm			10
+		flags			random wave
+	}
+
+	alpha
+	{
+		end				0.87 0.85
+		parm			10
+		flags			random wave
+	}
+
+	size
+	{
+		start			2
+		end				65
+		parm			1
+		flags			linear
+	}
+
+	length
+	{
+		start			2
+		end				65
+		parm			1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}

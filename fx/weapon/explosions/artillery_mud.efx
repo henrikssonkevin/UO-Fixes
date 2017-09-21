@@ -1,0 +1,11 @@
+FxRunner
+{
+	name				_call_globals
+
+	cullrange			32000
+
+	playfx
+	[
+		fx/weapon/explosions/artillery_dirt
+	]
+}

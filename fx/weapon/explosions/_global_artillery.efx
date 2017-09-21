@@ -1,0 +1,81 @@
+Particle
+{
+	name				fire_exp_core
+
+	count				1 2
+
+	life				100 250
+
+	cullrange			32000
+
+	origin				-25 0 0 0 0 0
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			0 -25 -25 100 25 25
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	size
+	{
+		end				150 225
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Light
+{
+	name				D_Light
+
+	life				500 750
+
+	origin				25 0 0
+
+	rgb
+	{
+		start			0.9922 0.851 0.5843
+		end				0.2235 0.06667 0.06667
+		flags			linear
+	}
+
+	size
+	{
+		start			2000 2200
+		flags			linear
+	}
+}
+
+CameraShake
+{
+	name				cam_shake
+
+	flags				usePhysics
+
+	life				750 1500
+
+	cullrange			1000
+
+	bounce				8
+
+	radius				1000
+
+	intensity			12
+}

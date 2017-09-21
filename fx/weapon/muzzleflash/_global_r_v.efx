@@ -1,0 +1,80 @@
+Light
+{
+	name				Light
+
+	flags				depthHack relative
+
+	life				100
+
+	origin				10 10 10
+
+	rgb
+	{
+		start			0.9922 0.8353 0.5412
+		end				0.8353 0.5176 0.1686
+		flags			random linear
+	}
+
+	size
+	{
+		start			200
+		end				100
+		flags			random linear
+	}
+}
+
+CameraShake
+{
+	name				cam_shake
+
+	flags				depthHack usePhysics
+
+	life				25 50
+
+	cullrange			1000
+
+	bounce				2
+
+	radius				1000
+
+	intensity			3
+}
+
+Particle
+{
+	name				glow
+
+	flags				depthHack relative
+
+	life				50
+
+	origin				0 0 0 3 0 0
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2 0.35
+		end				0
+		parm			0.15 0.25
+	}
+
+	size
+	{
+		start			12
+		end				12
+	}
+
+	shaders
+	[
+		weapon_v/glow_red_a
+		weapon_v/glow_red_b
+	]
+}

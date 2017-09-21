@@ -1,0 +1,142 @@
+Particle
+{
+	name				smoke_front_mist_slow
+
+	flags				depthHack useAlpha
+
+	count				3
+
+	life				500 750
+
+	origin				0 0 0 72 0 0
+
+	rotation			0 360
+
+	rotationDelta		-5
+
+	velocity			0 -75 -75 100 75 75
+
+	gravity				0 100
+
+	rgb
+	{
+		start			0.7412 0.7765 0.749
+		end				0.1961 0.1922 0.2
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.6
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			15 25
+		end				45 55
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/smk_p_none_wht_a
+		weapon_v/smk_p_none_wht_b
+		weapon_v/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				depthHack useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				5 10
+
+	life				750 1250
+
+	delay				0 1000
+
+	rotation			0 360
+
+	rotationDelta		-5
+
+	velocity			0 -1 -1 2 1 1
+
+	gravity				10 25
+
+	rgb
+	{
+		start			0.7176 0.7451 0.6941
+		end				0.3961 0.3882 0.4039
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.75
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			2 3
+		end				8 10
+		flags			linear
+	}
+
+	shaders
+	[
+		weapon_v/smk_p_fractal_wht_a
+		weapon_v/smk_p_fractal_wht_b
+		weapon_v/smk_p_fractal_wht_c
+		weapon_v/smk_p_none_wht_a
+		weapon_v/smk_p_none_wht_b
+		weapon_v/smk_p_none_wht_c
+	]
+}
+
+Light
+{
+	flags				depthHack relative
+
+
+	life				100 250
+
+	origin				50 0 0
+
+	rgb
+	{
+		start			1 0.8039 0.5098
+		end				0.3255 0.007843 0.007843
+	}
+
+	size
+	{
+		start			200 210
+		end				100 110
+		flags			linear
+	}
+}
+
+CameraShake
+{
+	name				cam_shake
+
+	flags				depthHack usePhysics
+
+	life				25
+
+	bounce				3
+
+	radius				1000
+
+	intensity			3
+}

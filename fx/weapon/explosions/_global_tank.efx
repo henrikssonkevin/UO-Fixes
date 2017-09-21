@@ -1,0 +1,189 @@
+Particle
+{
+	name				fire_exp_core
+
+	life				100 250
+
+	cullrange			32000
+
+	origin				-25 0 0 0 0 0
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			0 -20 -20 75 20 20
+
+	rgb
+	{
+		end				0.7529 0.4196 0.1961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	size
+	{
+		end				300 350
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				fire_exp
+
+	count				2
+
+	life				100 200
+
+	cullrange			16000
+
+	rotation			0 360
+
+	rotationDelta		-20 20
+
+	velocity			0 -5 -5 5 5 5
+
+	rgb
+	{
+		end				1 0.502 0
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		end				25 150
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Light
+{
+	name				D_Light
+
+	life				250 350
+
+	origin				25 0 0
+
+	rgb
+	{
+		start			0.9922 0.851 0.5843
+		end				0.2235 0.06667 0.06667
+		flags			linear
+	}
+
+	size
+	{
+		start			1000 1200
+		end				500 600
+		flags			linear
+	}
+}
+
+CameraShake
+{
+	name				CameraShake
+
+	flags				usePhysics
+
+	life				250 500
+
+	cullrange			1000
+
+	bounce				9
+
+	radius				1000
+
+	intensity			9
+}
+
+Particle
+{
+	name				fire_plume
+
+	spawnFlags			evenDistribution
+
+	count				2 3
+
+	life				200 300
+
+	rotation			0 360
+
+	rotationDelta		-45 45
+
+	velocity			300 -20 -20 650 20 20
+
+	gravity				-120 -100
+
+	rgb
+	{
+		end				0.7529 0.4196 0.1961
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.25 0.5
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	size
+	{
+		start			0
+		end				275 350
+		flags			linear
+	}
+
+	length
+	{
+		start			10
+		end				60
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}

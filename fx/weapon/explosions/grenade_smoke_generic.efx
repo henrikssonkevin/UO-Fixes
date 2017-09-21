@@ -1,0 +1,322 @@
+Particle
+{
+	name				smoke_plume
+
+	flags				useAlpha
+
+	count				2
+
+	life				200 250
+
+	cullrange			1500
+
+	origin				0 -25 -25 12 25 25
+
+	rotation			-10 10
+
+	rotationDelta		-5 5
+
+	velocity			200 -50 -50 300 50 50
+
+	gravity				5 25
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				125
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_top_wht_a
+		smoke/smk_p_top_wht_b
+		smoke/smk_p_top_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_linger
+
+	flags				useAlpha
+
+	count				4 8
+
+	life				1500 2500
+
+	cullrange			2000
+
+	origin				0 -75 -75 25 75 75
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			0 -25 -25 100 25 25
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.7529 0.7529 0.7529
+		parm			5 10
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.15 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			50 75
+		end				100 150
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Particle
+{
+	name				smoke_shockwave
+
+	flags				useAlpha
+
+	count				6 8
+
+	life				100 150
+
+	cullrange			1000
+
+	origin				0 -15 -15 15 15 15
+
+	radius				30
+
+	rotation			-5 5
+
+	rotationDelta		-15 15
+
+	velocity			0 -875 -875 15 875 875
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.749 0.7529 0.6863
+		end				0.7529 0.7529 0.7529
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				150 250
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}
+
+Decal
+{
+	name				Decal_scortchmark
+
+	life				2e+004 3e+004
+
+	cullrange			2000
+
+	rotation			0 360
+
+	size
+	{
+		start			36 48
+	}
+
+	shaders
+	[
+		impact/scorch_concrete_a
+		impact/scorch_concrete_b
+	]
+}
+
+Particle
+{
+	name				embers
+
+	flags				usePhysics
+
+	count				5 10
+
+	life				250 2000
+
+	cullrange			600
+
+	bounce				0.2 0.5
+
+	rotation			0 360
+
+	rotationDelta		-15 15
+
+	velocity			50 -125 -125 150 125 125
+
+	gravity				-500 -100
+
+	rgb
+	{
+		end				1 0.502 0
+		flags			linear
+	}
+
+	size
+	{
+		end				0
+		parm			50 75
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		misc/glow_red_a
+		misc/glow_red_b
+	]
+}
+
+Particle
+{
+	name				fire_exp
+
+	life				100 200
+
+	cullrange			1500
+
+	rotation			0 360
+
+	rotationDelta		-20 20
+
+	velocity			0 -5 -5 5 5 5
+
+	rgb
+	{
+		end				1 0.502 0
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.25 0.5
+		flags			linear
+	}
+
+	size
+	{
+		end				25 50
+		flags			linear
+	}
+
+	shaders
+	[
+		fire/exp_gen_a
+		fire/exp_gen_b
+		fire/exp_gen_c
+		fire/fire_ball_a
+		fire/fire_ball_b
+		fire/fire_ball_c
+	]
+}
+
+Particle
+{
+	name				smoke_shockwave_initial
+
+	flags				setShaderTime useAlpha
+
+	spawnFlags			orgOnCylinder
+
+	count				5 10
+
+	life				1000 2000
+
+	delay				25 45
+
+	cullrange			2000
+
+	radius				36 72
+
+	height				1 15
+
+	rotation			-5 5
+
+	rotationDelta		-5 5
+
+	velocity			0 -10 -10 5 10 10
+
+	gravity				0 25
+
+	rgb
+	{
+		start			0.7529 0.7529 0.7529
+		end				0.6235 0.5922 0.5569
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		parm			0.5 0.25
+		flags			linear
+	}
+
+	size
+	{
+		start			25 50
+		end				100 125
+		flags			linear
+	}
+
+	shaders
+	[
+		smoke/smk_p_fractal_wht_a
+		smoke/smk_p_fractal_wht_b
+		smoke/smk_p_fractal_wht_c
+		smoke/smk_p_none_wht_a
+		smoke/smk_p_none_wht_b
+		smoke/smk_p_none_wht_c
+	]
+}

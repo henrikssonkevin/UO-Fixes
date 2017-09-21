@@ -6,7 +6,7 @@ FxRunner
 
 	playfx
 	[
-		fx/weapon/muzzleflash/_global_p_v
+		fx/weapon/muzzleflash/_global_tt33_v
 	]
 }
 
@@ -19,6 +19,8 @@ Particle
 	count				2
 
 	life				50 75
+
+	origin			6 0 -4.5 6 0 -4.5
 
 	rotation			0 360
 
@@ -63,6 +65,8 @@ Particle
 
 	life				50 75
 
+	origin			6 0 -4.5 6 0 -4.5
+
 	rotation			0 360
 
 	rotationDelta		-15 15
@@ -82,8 +86,8 @@ Particle
 
 	size
 	{
-		start			4 6
-		end				10 12
+		start			2 4
+		end				5 7
 		flags			linear
 	}
 
@@ -107,6 +111,8 @@ Particle
 	life				250 350
 
 	delay				0 50
+
+	origin			6 0 -4.5 6 0 -4.5
 
 	rotation			0 360
 

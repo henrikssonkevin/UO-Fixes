@@ -6,7 +6,7 @@ FxRunner
 
 	playfx
 	[
-		fx/weapon/muzzleflash/_global_smg_v
+		fx/weapon/muzzleflash/_global_mp44_v
 	]
 }
 
@@ -22,7 +22,7 @@ Particle
 
 	life				50 75
 
-	origin				3 0 0
+	origin				3 -0.83 0
 
 	rotation			0 360
 
@@ -71,7 +71,7 @@ Particle
 
 	life				50 75
 
-	origin				3 0 0
+	origin				3 -0.83 0
 
 	rotation			0 360
 

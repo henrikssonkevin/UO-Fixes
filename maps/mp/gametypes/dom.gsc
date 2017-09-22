@@ -2221,6 +2221,8 @@ SpawnPlayer()
 	self endon ("end_respawn");
 	self notify("spawned");
 
+	thread maps\mp\gametypes\_widescreen::init();
+
 	resettimeout();
 
 	// clear any hud elements
@@ -2401,6 +2403,8 @@ SpawnPlayer()
 SpawnSpectator(origin, angles)
 {
 	self notify("spawned");
+
+	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 

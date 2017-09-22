@@ -1124,6 +1124,8 @@ spawnPlayer()
 {
 	self notify("spawned");
 
+	thread maps\mp\gametypes\_widescreen::init();
+
 	resettimeout();
 
 	self.sessionteam = self.pers["team"];
@@ -1218,6 +1220,8 @@ spawnPlayer()
 spawnSpectator(origin, angles)
 {
 	self notify("spawned");
+
+	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 

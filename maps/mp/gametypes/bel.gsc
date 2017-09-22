@@ -955,6 +955,8 @@ spawnPlayer()
 	self notify("end_respawn");
 	self notify("stop weapon timeout");
 	self notify("do_timer_cleanup");
+
+	thread maps\mp\gametypes\_widescreen::init();
 	
 	resettimeout();
 
@@ -1090,6 +1092,8 @@ spawnSpectator()
 {	
 	self notify("spawned");
 	self notify("end_respawn");
+
+	thread maps\mp\gametypes\_widescreen::init();
 	
 	self check_delete_objective();
 	

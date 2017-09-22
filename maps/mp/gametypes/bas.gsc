@@ -1781,6 +1781,8 @@ SpawnPlayer()
 	self endon ("end_respawn");
 	self notify("spawned");
 
+	thread maps\mp\gametypes\_widescreen::init();
+
 	self.toldme = 0;
 
 	resettimeout();
@@ -1940,6 +1942,8 @@ SpawnPlayer()
 SpawnSpectator(origin, angles)
 {
 	self notify("spawned");
+
+	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 

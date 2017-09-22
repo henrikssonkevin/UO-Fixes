@@ -955,8 +955,6 @@ spawnPlayer()
 	self notify("end_respawn");
 	self notify("stop weapon timeout");
 	self notify("do_timer_cleanup");
-
-	thread maps\mp\gametypes\_widescreen::init();
 	
 	resettimeout();
 
@@ -1086,14 +1084,15 @@ spawnPlayer()
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnSpectator()
 {	
 	self notify("spawned");
 	self notify("end_respawn");
-
-	thread maps\mp\gametypes\_widescreen::init();
 	
 	self check_delete_objective();
 	
@@ -1121,6 +1120,9 @@ spawnSpectator()
 	self setClientCvar("cg_objectiveText", &"BEL_SPECTATOR_OBJS");
 	
 	count_num_players();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnIntermission()
@@ -1153,6 +1155,9 @@ spawnIntermission()
 		self.blackscreentext2 destroy();
 	if(isDefined(self.blackscreentimer))
 		self.blackscreentimer destroy();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 respawn(noclick, delay)

@@ -680,8 +680,6 @@ spawnPlayer()
 	self notify("spawned");
 	self notify("end_respawn");
 
-	thread maps\mp\gametypes\_widescreen::init();
-
 	resettimeout();
 
 //	if(isDefined(self.shocked))
@@ -732,14 +730,15 @@ spawnPlayer()
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnSpectator(origin, angles)
 {
 	self notify("spawned");
 	self notify("end_respawn");
-
-	thread maps\mp\gametypes\_widescreen::init();
 	
 	resettimeout();
 
@@ -771,6 +770,9 @@ spawnSpectator(origin, angles)
 	}
 
 	self setClientCvar("cg_objectiveText", &"DM_KILL_OTHER_PLAYERS");
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnIntermission()
@@ -798,6 +800,9 @@ spawnIntermission()
 		self spawn(spawnpoint.origin, spawnpoint.angles);
 	else
 		maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 respawn()

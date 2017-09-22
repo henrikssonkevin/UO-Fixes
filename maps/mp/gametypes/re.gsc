@@ -1253,8 +1253,6 @@ spawnPlayer()
 {
 	self notify("spawned");
 
-	thread maps\mp\gametypes\_widescreen::init();
-
 	resettimeout();
 
 	self.sessionteam = self.pers["team"];
@@ -1358,13 +1356,14 @@ spawnPlayer()
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnSpectator(origin, angles)
 {
 	self notify("spawned");
-
-	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 
@@ -1401,6 +1400,9 @@ spawnSpectator(origin, angles)
 	//else if(game["re_attackers"] == "axis")
 	//	self setClientCvar("cg_objectiveText", &"RE_AXIS", game["re_attackers_obj_text"]);
 	self setClientCvar("cg_objectiveText", game["re_spectator_obj_text"]);
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnIntermission()
@@ -1422,6 +1424,9 @@ spawnIntermission()
 		self spawn(spawnpoint.origin, spawnpoint.angles);
 	else
 		maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 killcam(attackerNum, delay)

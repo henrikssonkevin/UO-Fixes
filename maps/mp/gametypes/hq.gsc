@@ -964,8 +964,6 @@ spawnPlayer(farthest)
 	
 	self notify("spawned");
 	self notify("end_respawn");
-
-	thread maps\mp\gametypes\_widescreen::init();
 	
 	self.respawnwait = undefined;
 	resettimeout();
@@ -1039,6 +1037,9 @@ spawnPlayer(farthest)
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 update_scoreboard_objtext()
@@ -1054,8 +1055,6 @@ spawnSpectator(origin, angles)
 {
 	self notify("spawned");
 	self notify("end_respawn");
-
-	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 
@@ -1086,6 +1085,9 @@ spawnSpectator(origin, angles)
 	level hq_removeall_hudelems(self);
 	
 	self setClientCvar("cg_objectiveText", &"HQ_OBJ_TEXT", level.scorelimit);
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 spawnIntermission()
@@ -1110,6 +1112,9 @@ spawnIntermission()
 		maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
 	
 	level hq_removeall_hudelems(self);
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 respawn(instant)

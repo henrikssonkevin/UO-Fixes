@@ -1781,8 +1781,6 @@ SpawnPlayer()
 	self endon ("end_respawn");
 	self notify("spawned");
 
-	thread maps\mp\gametypes\_widescreen::init();
-
 	self.toldme = 0;
 
 	resettimeout();
@@ -1932,6 +1930,9 @@ SpawnPlayer()
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 // ----------------------------------------------------------------------------------
@@ -1942,8 +1943,6 @@ SpawnPlayer()
 SpawnSpectator(origin, angles)
 {
 	self notify("spawned");
-
-	thread maps\mp\gametypes\_widescreen::init();
 
 	resettimeout();
 
@@ -1977,6 +1976,9 @@ SpawnSpectator(origin, angles)
 	updateTeamStatus();
 
 	self setClientCvar("cg_objectiveText", game["bas_obj_text"]);
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 }
 
 // ----------------------------------------------------------------------------------
@@ -2004,6 +2006,9 @@ SpawnIntermission()
 		self spawn(spawnpoint.origin, spawnpoint.angles);
 	else
 		maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
+
+	//Change FoV
+	thread maps\mp\gametypes\_widescreen::init();
 		
 }
 

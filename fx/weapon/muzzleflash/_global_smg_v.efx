@@ -68,8 +68,8 @@ Particle
 
 	size
 	{
-		start			12
-		end				12
+		start			10
+		end				10
 	}
 
 	shaders

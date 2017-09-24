@@ -2172,8 +2172,8 @@ bombzone_think(bombzone_other)
 				other.planticon = newClientHudElem(other);				
 				other.planticon.alignX = "center";
 				other.planticon.alignY = "middle";
-				other.planticon.x = 320;
-				other.planticon.y = 345;
+				other.planticon.x = 325;
+				other.planticon.y = 425;
 				other.planticon setShader("ui_mp/assets/hud@plantbomb.tga", 32, 32);			
 			}
 			

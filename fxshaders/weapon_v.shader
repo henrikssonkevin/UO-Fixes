@@ -5,7 +5,7 @@
 weapon_v/glow_red_a
 {
 	entityMergable
-	sort	additive
+	sort	nearest
     {
        map gfx/efx_assets/misc/glow_red_a.dds
        blendfunc add
@@ -16,7 +16,7 @@ weapon_v/glow_red_a
 weapon_v/glow_red_b
 {
 	entityMergable
-	sort	additive
+	sort	nearest
     {
        map gfx/efx_assets/misc/glow_red_b.dds
        blendfunc add

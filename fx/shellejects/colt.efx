@@ -22,8 +22,8 @@ Emitter
 
 	size
 	{
-		start			0.45
-		end				0.45
+		start			0.55
+		end				0.55
 	}
 
 	models

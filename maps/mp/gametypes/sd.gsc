@@ -2174,7 +2174,7 @@ bombzone_think(bombzone_other)
 				other.planticon.alignY = "middle";
 				other.planticon.x = 320;
 				other.planticon.y = 345;
-				other.planticon setShader("ui_mp/assets/hud@plantbomb.tga", 64, 64);			
+				other.planticon setShader("ui_mp/assets/hud@plantbomb.tga", 32, 32);			
 			}
 			
 			while(other istouching(self) && isAlive(other) && other useButtonPressed())
